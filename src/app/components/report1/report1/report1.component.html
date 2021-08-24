@@ -1,0 +1,31 @@
+<div class="d-flex vh-100" style="background-color: rgb(20, 238, 238);">
+  <div class="row vw-100 justify-content-center align-self-center">
+    <div class="col-auto">
+      <table class="table table-sm table-bordered table-responsive">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Designation</th>
+            <th scope="col">Department</th>
+            <th scope="col">Company</th>
+            <th scope="col">Joining Date</th>
+            <th scope="col">Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of report1List">
+            <th scope="row">{{item.employeeId}}</th>
+            <td>{{item.employeeName}}</td>
+            <td>{{item.designationName}}</td>
+            <td>{{item.departmentName}}</td>
+            <td>{{item.companyName}}</td>
+            <td>{{GetDateString(item.joiningDate)}}</td>
+            <td>{{item.salary}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
