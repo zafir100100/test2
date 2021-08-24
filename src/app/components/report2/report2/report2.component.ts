@@ -26,11 +26,13 @@ export class Report2Component implements OnInit {
     console.log("2: " + this.tDate);
 
     let y: Report2InputModel = new Report2InputModel();
-    y.fromDate = this.fDate;
-    y.toDate = this.tDate;
+    y.dateFrom = this.fDate;
+    y.dateTo = this.tDate;
     this.report2Service.GetReport2(y).subscribe(
       (data: Report1OutputModel[]) => {
         this.report1List = data;
+        console.log("here is log "+data);
+
       }
     );
   }
